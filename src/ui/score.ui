@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ScoreWindow</class>
+ <widget class="QMainWindow" name="ScoreWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Quản lý điểm</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+    <item>
+     <layout class="QHBoxLayout" name="filterLayout">
+      <item>
+       <widget class="QLabel" name="filterLabel">
+        <property name="text">
+         <string>Học sinh:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="studentCombo"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="scoreTable">
+      <property name="columnCount">
+       <number>6</number>
+      </property>
+      <column>
+       <property name="text">
+        <string>Mã</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Student</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Môn học</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Score</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Học kỳ</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Xếp loại</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="buttonLayout">
+      <item>
+       <widget class="QPushButton" name="addButton">
+        <property name="text">
+         <string>Thêm điểm</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="editButton">
+        <property name="text">
+         <string>Edit</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="deleteButton">
+        <property name="text">
+         <string>Delete</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="calcButton">
+        <property name="text">
+         <string>Tính trung bình</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="refreshButton">
+        <property name="text">
+         <string>Refresh</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
