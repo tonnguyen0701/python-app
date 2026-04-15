@@ -1,0 +1,58 @@
+from .qt_compat import QtCore, QtGui, QtWidgets
+
+class Ui_TeacherWindow(object):
+    def setupUi(self, TeacherWindow):
+        TeacherWindow.setObjectName("TeacherWindow")
+        TeacherWindow.resize(800, 500)
+        self.centralwidget = QtWidgets.QWidget(TeacherWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.mainLayout = QtWidgets.QVBoxLayout(self.centralwidget)
+        self.mainLayout.setObjectName("mainLayout")
+        self.searchLayout = QtWidgets.QHBoxLayout()
+        self.searchLayout.setObjectName("searchLayout")
+        self.searchLabel = QtWidgets.QLabel(self.centralwidget)
+        self.searchLabel.setObjectName("searchLabel")
+        self.searchLayout.addWidget(self.searchLabel)
+        self.searchEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.searchEdit.setObjectName("searchEdit")
+        self.searchLayout.addWidget(self.searchEdit)
+        self.mainLayout.addLayout(self.searchLayout)
+        self.teacherTable = QtWidgets.QTableWidget(self.centralwidget)
+        self.teacherTable.setObjectName("teacherTable")
+        self.teacherTable.setColumnCount(5)
+        self.teacherTable.setRowCount(0)
+        for i in range(5):
+            item = QtWidgets.QTableWidgetItem()
+            self.teacherTable.setHorizontalHeaderItem(i, item)
+        self.mainLayout.addWidget(self.teacherTable)
+        self.buttonLayout = QtWidgets.QHBoxLayout()
+        self.buttonLayout.setObjectName("buttonLayout")
+        self.addButton = QtWidgets.QPushButton(self.centralwidget)
+        self.addButton.setObjectName("addButton")
+        self.buttonLayout.addWidget(self.addButton)
+        self.editButton = QtWidgets.QPushButton(self.centralwidget)
+        self.editButton.setObjectName("editButton")
+        self.buttonLayout.addWidget(self.editButton)
+        self.deleteButton = QtWidgets.QPushButton(self.centralwidget)
+        self.deleteButton.setObjectName("deleteButton")
+        self.buttonLayout.addWidget(self.deleteButton)
+        self.refreshButton = QtWidgets.QPushButton(self.centralwidget)
+        self.refreshButton.setObjectName("refreshButton")
+        self.buttonLayout.addWidget(self.refreshButton)
+        self.mainLayout.addLayout(self.buttonLayout)
+        TeacherWindow.setCentralWidget(self.centralwidget)
+        self.retranslateUi(TeacherWindow)
+        QtCore.QMetaObject.connectSlotsByName(TeacherWindow)
+
+    def retranslateUi(self, TeacherWindow):
+        _translate = QtCore.QCoreApplication.translate
+        TeacherWindow.setWindowTitle(_translate("TeacherWindow", "Quản lý giáo viên"))
+        self.searchLabel.setText(_translate("TeacherWindow", "Tìm kiếm:"))
+        self.searchEdit.setPlaceholderText(_translate("TeacherWindow", "Nhập tên giáo viên..."))
+        self.addButton.setText(_translate("TeacherWindow", "Thêm giáo viên"))
+        self.editButton.setText(_translate("TeacherWindow", "Sửa"))
+        self.deleteButton.setText(_translate("TeacherWindow", "Xóa"))
+        self.refreshButton.setText(_translate("TeacherWindow", "Làm mới"))
+        header_texts = ["Mã", "Tên", "Email", "SĐT", "Bộ môn"]
+        for idx, text in enumerate(header_texts):
+            self.teacherTable.horizontalHeaderItem(idx).setText(_translate("TeacherWindow", text))
