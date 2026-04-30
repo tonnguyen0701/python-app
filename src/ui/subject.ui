@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Quản lý môn học</string>
+   <string>Môn học Management</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="mainLayout">
@@ -27,7 +27,7 @@
       <item>
        <widget class="QLineEdit" name="searchEdit">
         <property name="placeholderText">
-         <string>Nhập tên hoặc mã môn học...</string>
+         <string>Nhập tên môn học...</string>
         </property>
        </widget>
       </item>
@@ -36,7 +36,7 @@
     <item>
      <widget class="QTableWidget" name="subjectTable">
       <property name="columnCount">
-       <number>5</number>
+       <number>4</number>
       </property>
       <column>
        <property name="text">
@@ -45,22 +45,17 @@
       </column>
       <column>
        <property name="text">
-        <string>Tên</string>
+        <string>Tên môn học</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>Lớp học</string>
+        <string>Mã</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>Ca học</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Ngày học</string>
+        <string>Số tín chỉ</string>
        </property>
       </column>
      </widget>
@@ -70,28 +65,28 @@
       <item>
        <widget class="QPushButton" name="addButton">
         <property name="text">
-         <string>Thêm</string>
+         <string>Thêm môn học</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="editButton">
         <property name="text">
-         <string>Sửa</string>
+         <string>Edit</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="deleteButton">
         <property name="text">
-         <string>Xóa</string>
+         <string>Delete</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="refreshButton">
         <property name="text">
-         <string>Làm mới</string>
+         <string>Refresh</string>
         </property>
        </widget>
       </item>
